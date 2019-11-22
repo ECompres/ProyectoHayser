@@ -1,0 +1,301 @@
+<form action="">
+    <style>
+        .formError {
+            width: auto;
+            height: 25px;
+            background: red;
+            color: white;
+        }
+    </style>
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+
+            <label for="firstName">Primer Nombre*</label>
+            <input type="text" class="form-control" name="firstName" #firstName="ngModel" id="firstName"
+                [(ngModel)]="student.firstName" placeholder="Primer nombre" required>
+            <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">El primer nombre es
+                obligatorio</div>
+
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="secondName">Segundo Nombre</label>
+            <input type="text" class="form-control" name="secondName" #secondName="ngModel"
+                [(ngModel)]="student.secondName" id="secondName" placeholder="Segundo nombre">
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="firstLastName">Primer Apellido*</label>
+            <input type="text" class="form-control" name="firstLastName" id="firstLastName" #firstLastName="ngModel"
+                [(ngModel)]="student.firstLastName" placeholder="Primer Apellido" required>
+            <div class="alert alert-danger" *ngIf="firstLastName.touched && !firstLastName.valid">El primer apellido es
+                obligatorio</div>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="secondLastName">Segundo Apellido</label>
+            <input type="text" class="form-control" id="secondLastName" placeholder="Segundo Apellido">
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="birthDate">Fecha De Nacimiento*</label>
+            <input type="date" class="form-control" id="birthDate" name="birthDate" #birthDate="ngModel"
+                [(ngModel)]="student.birthDate" required>
+            <div class="alert alert-danger" *ngIf="birthDate.touched && !birthDate.valid">La fecha de nacimiento es
+                obligatoria</div>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="birthPlace">Lugar de Nacimiento*</label>
+            <input type="text" class="form-control" id="birthPlace" name="birthPlace" #birthPlace="ngModel"
+                [(ngModel)]="student.birthPlace" placeholder="Lugar de nacimiento" required>
+            <div class="alert alert-danger" *ngIf="birthPlace.touched && !birthPlace.valid">El lugar de nacimiento es
+                obligatorio</div>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="genre">Genero*</label>
+            <select class="form-control" name="genre" id="genre" #genre="ngModel" [(ngModel)]="student.genre" required>
+                <option disabled="disabled" value="">Seleccione Genero</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="genre.touched && !genre.valid">El genero es obligatorio</div>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="civilStatus">Estado Civil*</label>
+
+            <select class="form-control" id="civilStatus" name="civilStatus" #civilStatus="ngModel"
+                [(ngModel)]="student.civilStatus" required>
+                <option disabled="disabled" value="">Seleccione</option>
+                <option value="soltero">Soltero(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="viudo">Viudo(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+
+            </select>
+            <div class="alert alert-danger" *ngIf="civilStatus.touched && !civilStatus.valid">El estado civil es
+                obligatorio</div>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="email">Correo Electronico*</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo electronico" name="email"
+                #email="ngModel" [(ngModel)]="student.email" required>
+            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">El correo electronico es obligatorio
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="cedula">Cedula</label>
+            <input type="text" minlength="11" maxlength="11" class="form-control" id="cedula" placeholder="00000000000"
+                required pattern="[0-9]{11,11}" title="La cédula debe tener 11 dígitos y solo numeros" name="cedula"
+                #cedula="ngModel" [(ngModel)]="student.cedula">
+            <div class="alert alert-danger" *ngIf="cedula.touched && !cedula.valid">La cedula es obligatoria</div>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="country">Seleccione pais de origen*</label>
+            <select id="country" name="country" class="form-control" #country="ngModel" [(ngModel)]="student.country"
+                required>
+                <option disabled="disabled" value="">--Seleccione un País de Origen</option>
+                <option value="ANT">
+                    ANTIGUA Y BARBUDA
+                </option>
+                <option value="ARG">
+                    ARGENTINA
+                </option>
+                <option value="ARU">
+                    ARUBA
+                </option>
+                <option value="AUS">
+                    AUSTRIA
+                </option>
+                <option value="BEL">
+                    BELICE
+                </option>
+                <option value="BOL">
+                    BOLIVIA
+                </option>
+                <option value="BRA">
+                    BRASIL
+                </option>
+                <option value="BUL">
+                    BULGARIA
+                </option>
+                <option value="CAN">
+                    CANADA
+                </option>
+                <option value="CHI">
+                    CHILE
+                </option>
+                <option value="CHN">
+                    CHINA
+                </option>
+                <option value="COL">
+                    COLOMBIA
+                </option>
+                <option value="COR">
+                    COREA
+                </option>
+                <option value="COS">
+                    COSTA RICA
+                </option>
+                <option value="CUB">
+                    CUBA
+                </option>
+                <option value="ECU">
+                    ECUADOR
+                </option>
+                <option value="SAL">
+                    EL SALVADOR
+                </option>
+                <option value="ESP">
+                    ESPAÑA
+                </option>
+                <option value="USA">
+                    ESTADOS UNIDOS DE AMERICA
+                </option>
+                <option value="FIN">
+                    FINLANDIA
+                </option>
+                <option value="FRA">
+                    FRANCIA
+                </option>
+                <option value="GUA">
+                    GUATEMALA
+                </option>
+                <option value="HAI">
+                    HAITI
+                </option>
+                <option value="HOL">
+                    HOLANDA
+                </option>
+                <option value="HON">
+                    HONDURAS
+                </option>
+                <option value="ITA">
+                    ITALIA
+                </option>
+                <option value="JAM">
+                    JAMAICA
+                </option>
+                <option value="JAP">
+                    JAPON
+                </option>
+                <option value="LIB">
+                    LIBANO
+                </option>
+                <option value="MEX">
+                    MEXICO
+                </option>
+                <option value="NIC">
+                    NICARAGUA
+                </option>
+                <option value="PAK">
+                    PAKISTAN
+                </option>
+                <option value="PAN">
+                    PANAMA
+                </option>
+                <option value="PAR">
+                    PARAGUAY
+                </option>
+                <option value="PER">
+                    PERU
+                </option>
+                <option value="PR">
+                    PUERTO RICO
+                </option>
+                <option value="ALB">
+                    REPUBLICA DE ALBANIA
+                </option>
+                <option value="DOM">
+                    REPUBLICA DOMINICANA
+                </option>
+                <option value="RUM">
+                    RUMANIA
+                </option>
+                <option value="RUS">
+                    RUSIA
+                </option>
+                <option value="SIR">
+                    SIRIA
+                </option>
+                <option value="SUI">
+                    SUIZA
+                </option>
+                <option value="TAI">
+                    TAIWAN
+                </option>
+                <option value="TUR">
+                    TURQUIA
+                </option>
+                <option value="UCR">
+                    UCRANIA
+                </option>
+                <option value="URU">
+                    URUGUAY
+                </option>
+                <option value="VEN">
+                    VENEZUELA
+                </option>
+                <option value="YUG">
+                    YUGOSLAVA
+                </option>
+            </select>
+            <div class="alert alert-danger" *ngIf="country.touched && !country.valid">El pais natal es obligatorio</div>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="cellphoneNumber">Celular*</label>
+            <input type="text" minlength="10" maxlength="10" class="form-control" id="cellphoneNumber"
+                placeholder="Ejemplo: 8091234567" required pattern="[0-9]{10,10}" name="cellphoneNumber"
+                #cellphoneNumber="ngModel" [(ngModel)]="student.cellphoneNumber">
+            <div class="alert alert-danger" *ngIf="cellphoneNumber.touched && !cellphoneNumber.valid">El numero de
+                celular es obligatorio</div>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="password1">Contraseña</label>
+            <input type="password" class="form-control" id="password1" name="password1" #password1="ngModel"
+                [(ngModel)]="student.password" placeholder="Contraseña" required>
+            <div class="alert alert-danger" *ngIf="password1.touched && !password1.valid">La contraseña es obligatoria
+            </div>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label for="confirmPassword">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                placeholder="Confirmar contraseña" #confirmPassword="ngModel" [(ngModel)]="p" required >
+            {{p}}
+            <div class="alert alert-danger" *ngIf="confirmPassword.touched && !confirmPassword.valid">La confirmación de
+                la contraseña es obligatoria</div>
+
+        </div>
+        <button (click)="confirmar()" type="submit">Enviar</button>
+    </div>
+
+</form>
