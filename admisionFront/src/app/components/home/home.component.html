@@ -1,4 +1,4 @@
-<form action="">
+<form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)" action="">
     <style>
         .formError {
             width: auto;
@@ -38,10 +38,10 @@
         </div>
 
         <div class="form-group col-md-6">
-
-            <label for="secondLastName">Segundo Apellido</label>
-            <input type="text" class="form-control" id="secondLastName" placeholder="Segundo Apellido">
-
+            <label for="secondLastName">Segundo apellido</label>
+            <input type="text" class="form-control" name="secondLastName" id="secondLastName" #secondLastName="ngModel"
+                [(ngModel)]="student.secondLastName" placeholder="Segundo Apellido" required>
+            
         </div>
 
         <div class="form-group col-md-6">
@@ -289,13 +289,20 @@
 
             <label for="confirmPassword">Confirmar contraseña</label>
             <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
-                placeholder="Confirmar contraseña" #confirmPassword="ngModel" [(ngModel)]="p" required >
+                placeholder="Confirmar contraseña" #confirmPassword="ngModel" [(ngModel)]="p" required>
             {{p}}
             <div class="alert alert-danger" *ngIf="confirmPassword.touched && !confirmPassword.valid">La confirmación de
                 la contraseña es obligatoria</div>
 
         </div>
-        <button (click)="confirmar()" type="submit">Enviar</button>
+        <input type="submit" value="Enviar" [disabled]="!studentForm.form.valid">
     </div>
 
 </form>
+<ul>
+    <li *ngFor="let student of students">
+        <h3> {{student.FirstName}}</h3>
+        <p>{{student.FirstLastName}}</p>
+
+    </li>
+</ul>

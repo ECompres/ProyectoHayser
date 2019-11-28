@@ -12,11 +12,11 @@ namespace webAPI.Models
         public int Id { get; set;  }
         [Required]
         public string FirstName { get; set; }
-        [Required]
+      
         public string SecondName { get; set; }
         [Required]
         public string FirstLastName { get; set; }
-        [Required]
+        
         public string SecondLastName { get; set; }
         [Required]
         public string BirthDate { get; set; }
@@ -36,5 +36,7 @@ namespace webAPI.Models
         public string CellphoneNumber { get; set; }
         [Required]
         public string Password { get; set; }
+        [Required]
+        public bool Status { get; set; }
     }
 }

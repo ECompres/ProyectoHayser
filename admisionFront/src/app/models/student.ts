@@ -1,6 +1,6 @@
 export class student {
     constructor(
-        public Id: string,
+        public id:number,
         public FirstName: string,
         public SecondName: string,
         public FirstLastName: string,
@@ -14,5 +14,6 @@ export class student {
         public Country: string,
         public CellphoneNumber: string,
         public Password: string,
+        public Status:boolean
     ) { }
 }

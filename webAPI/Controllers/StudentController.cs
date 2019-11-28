@@ -19,7 +19,7 @@ namespace webAPI.Controllers
             this.context = context;
         }
         [HttpGet]
-        public IEnumerable<Student> Get()
+        public ICollection<Student> Get()
         {
             return context.Student.ToList();
         }
@@ -28,13 +28,13 @@ namespace webAPI.Controllers
         {
             var stud = context.Student.FirstOrDefault(x => x.Id == id);
 
-            if (stud == null) {
+            if (stud != null) {
 
-                return NotFound();
+                return Ok(stud); 
 
             }
 
-            return Ok(stud);
+            return NotFound();
 
         }
 
@@ -47,31 +47,35 @@ namespace webAPI.Controllers
                 context.SaveChanges();
                 return Ok(student);
             }
-            return BadRequest(ModelState);
+            return BadRequest();
         }
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Student student, int id)
+        public IActionResult Put([FromBody] Student estudiante, int id)
         {
-            var stud = context.Student.FirstOrDefault(x => x.Id == id);
-            if(student.Id != id)
+            
+            if(estudiante.Id == id)
             {
-                return BadRequest();
+
+                context.Entry(estudiante).State = EntityState.Modified;
+                context.SaveChanges();
+                return Ok(estudiante); 
+
             }
-            context.Entry(student).State = EntityState.Modified;
-            context.SaveChanges();
-            return Ok(student);
+
+            return BadRequest();
         }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             var stud = context.Student.FirstOrDefault(x => x.Id == id);
-            if(stud == null)
+            if(stud != null)
             {
-                return NotFound();
+                context.Student.Remove(stud);
+                context.SaveChanges();
+                return Ok("Se eliminó a: " + stud.FirstName + " " + stud.FirstLastName); 
             }
-            context.Student.Remove(stud);
-            context.SaveChanges();
-            return Ok("Se eliminó a: " + stud.FirstName + " " + stud.FirstLastName);
+            return NotFound();
         }
     }
 }
