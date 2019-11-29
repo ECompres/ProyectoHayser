@@ -12,3 +12,17 @@ C:\Users\LuisC\Desktop\Proyecto Final V&V\webAPI\obj\Debug\netcoreapp2.2\webAPI.
 C:\Users\LuisC\Desktop\Proyecto Final V&V\webAPI\bin\Debug\netcoreapp2.2\webAPI.pdb
 C:\Users\LuisC\Desktop\Proyecto Final V&V\webAPI\obj\Debug\netcoreapp2.2\webAPI.dll
 C:\Users\LuisC\Desktop\Proyecto Final V&V\webAPI\obj\Debug\netcoreapp2.2\webAPI.pdb
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\bin\Debug\netcoreapp2.2\webAPI.deps.json
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\bin\Debug\netcoreapp2.2\webAPI.runtimeconfig.json
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\bin\Debug\netcoreapp2.2\webAPI.runtimeconfig.dev.json
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\bin\Debug\netcoreapp2.2\webAPI.dll
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\bin\Debug\netcoreapp2.2\webAPI.pdb
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.csprojAssemblyReference.cache
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.csproj.CoreCompileInputs.cache
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.RazorAssemblyInfo.cache
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.RazorAssemblyInfo.cs
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.AssemblyInfoInputs.cache
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.AssemblyInfo.cs
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.RazorTargetAssemblyInfo.cache
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.dll
+C:\Users\LuisC\Desktop\Proyecto Final V&V\ProyectoHayser\webAPI\obj\Debug\netcoreapp2.2\webAPI.pdb

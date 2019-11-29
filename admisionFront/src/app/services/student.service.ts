@@ -16,12 +16,11 @@ export class StudentService {
     }
 
     testService(){
-        return "Algo";
+        return console.log("Algo");
     }
-
     getStudents(): Observable<any> {
         let headers = new HttpHeaders().set("Content-Type", "application/json");
-        return this._http.get(this.url, { headers: headers })
+        return this._http.get(this.url, { headers: headers });
     }
     getStudent(id): Observable<any> {
         let headers = new HttpHeaders().set("Content-Type", "application/json");

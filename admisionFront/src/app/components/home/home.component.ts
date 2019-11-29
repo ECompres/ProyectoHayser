@@ -20,34 +20,7 @@ export class HomeComponent implements OnInit {
     this.confirmPassword = "";
   }
 
-
-  // onSubmit(form) {
-  //   console.log(this.student);
-  //   console.log(form);
-
-  //   this._studentService.saveStudent(this.student).subscribe(
-  //     (res) => {
-  //       alert("El estudiante registrado para el proceso de admision");
-  //       console.log(res);
-  //       form.reset();
-  //     },
-  //     (err) => {
-  //       alert("El estudiante no pudo ser registrado");
-
-  //     }
-  //   )
-  // }
-  getStudents() {
-    this._studentService.getStudents().subscribe((res) => {
-      if (res.student) {
-        this.students = res.student;
-        console.log(this.students)
-      }
-    },
-      (err) => {
-        console.log(err);
-      })
-  }
+  
   onSubmit(form){
     this._studentService.saveStudent(this.student).subscribe(
       (res)=>{
@@ -84,9 +57,9 @@ export class HomeComponent implements OnInit {
     this._studentService.testService();
   }
   ngOnInit() {
-    this.getStudents();
+    
     this.getStudent(2);
-  
+    this._studentService.testService();
   }
 
 }

@@ -12141,11 +12141,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LuisC\\Desktop\\Proyecto Final V&V\\webAPI\\webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\LuisC\\Desktop\\Proyecto Final V&V\\ProyectoHayser\\webAPI\\webAPI.csproj",
       "projectName": "webAPI",
-      "projectPath": "C:\\Users\\LuisC\\Desktop\\Proyecto Final V&V\\webAPI\\webAPI.csproj",
+      "projectPath": "C:\\Users\\LuisC\\Desktop\\Proyecto Final V&V\\ProyectoHayser\\webAPI\\webAPI.csproj",
       "packagesPath": "C:\\Users\\LuisC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LuisC\\Desktop\\Proyecto Final V&V\\webAPI\\obj\\",
+      "outputPath": "C:\\Users\\LuisC\\Desktop\\Proyecto Final V&V\\ProyectoHayser\\webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        Admisiones
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Cedula</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.firstName }} {{ student.secondName }} </td>
+                <td>{{ student.firstLastName }} {{ student.secondLastName }} </td>
+                <td>{{ student.genre}} </td>
+                <td>{{ student.cedula }}</td>
+                <td *ngIf="!student.status">No admitido</td>
+                <td *ngIf="student.status">Admitido</td>
+                <td>
+                    <button type="button" class="btn btn-outline-success" style="margin-right:10px;" (click)="admitir(student,student.id)">Admitir</button> 
+                    <button type="button" class="btn btn-outline-warning" style="margin-right:10px;" (click)="noAdmitir(student,student.id)">No admitir</button> 
+                    <button type="button" class="btn btn-outline-danger" (click)="rechazar(student.id)">Rechazar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

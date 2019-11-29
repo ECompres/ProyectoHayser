@@ -6,11 +6,16 @@ import { FormsModule } from "@angular/forms";
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentService } from './services/student.service';
+import { LoginComponent } from './components/login/login.component';
+import { LobbyComponent } from './components/lobby/lobby.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    LobbyComponent
   ],
 
   imports: [
@@ -20,7 +25,8 @@ import { StudentService } from './services/student.service';
     HttpClientModule
   ],
   providers: [appRoutingProviders,
-    StudentService],
+    StudentService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
